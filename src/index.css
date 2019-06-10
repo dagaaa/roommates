@@ -5,9 +5,77 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+.menuitem{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Avenir", sans-serif;
+  margin-left: 40px;
+
+
+}
+
+/*.menuitem > a:hover{*/
+/*  color: #000080 !important;*/
+/*}*/
+
+/*.menuitem > a{*/
+/*  color: #ccccff !important;*/
+/*}*/
+
+.active {
+  color: #192a5a !important;
+  padding-right: 40px !important;
+}
+.navstyle{
+  color: #8790a7 !important;
+  padding-right: 30px !important;
+
+}
+.navstyle:hover{
+  color: #192a5a !important;
+}
+
+.logout{
+  color: #192a5a !important;
+  position: absolute;
+  right: 30px;
+}
+.navbackground{
+  background-color: white;
+  border-bottom: 3px solid #eaedf7;
+}
+.bodybackround{
+  position:fixed;
+  background-color: #eaedf7;
+  margin:0;
+  padding: 0;
+  /*left:210px;*/
+
+  width: 100%;
+  height: 100%;
+}
+hr{
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+#sidebar{
+  position:fixed;
+  background-color: white;
+  height: 100%;
+  width: 200px;
+}
+.box{
+  margin: 5px;
+  border: 1px solid #eaedf7;
+  justify-content: center;
 }
