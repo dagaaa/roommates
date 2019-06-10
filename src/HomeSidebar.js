@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Collapse, Button, CardBody, Card, UncontrolledCollapse} from 'reactstrap';
-
+import girl from './girl.png';
 
 class HomeSidebar extends Component {
     state = {
@@ -13,7 +13,6 @@ class HomeSidebar extends Component {
     render() {
         return (
             <div className="wrapper">
-
                 <nav id="sidebar">
                     <div className="box">
                         <p className="boardheader">{this.state.current}</p>
@@ -21,11 +20,13 @@ class HomeSidebar extends Component {
                             Home
                         </Button>
                         <UncontrolledCollapse toggler="#homeMembers">
-                            <div className="btn-group-vertical">{this.state.homemembers.map(member => (
-                                <button className="btn btn-sm box-sm"
-                                        onClick={() => this.setState({current: "Home-" + member})}>
-                                    {member}
-                                </button>))}</div>
+                            <div className="btn-group-vertical">
+                                {this.state.homemembers.map(member => (
+                                    <button className="btn btn-sm box-sm "
+                                            onClick={() => this.setState({current: "Home-" + member})}>
+                                        <img src={girl} width={40}/>
+                                        {member}
+                                    </button>))}</div>
                         </UncontrolledCollapse>
                         <Button color="primary" id="flatmates" className=" btn-sm sidenavbutton">
                             Rented Flat
@@ -34,8 +35,8 @@ class HomeSidebar extends Component {
                             <div class="btn-group-vertical">
                                 {this.state.flatmates.map(member => (
                                     <button class="btn btn-sm box-sm " onClick={() => this.setState({current:"Flat-"+member})}>
-                                    {member}
-                                    <img src="girl.png" alt="face"/>
+                                        <img  src={girl}  width={40} />
+                                        {member}
                                 </button>))}</div>
                         </UncontrolledCollapse>
                     </div>

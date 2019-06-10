@@ -7,6 +7,7 @@ import {
 
 import Home from './Home';
 import About from './About';
+import Ranking from './Ranking'
 import Menubar from "./Navbar";
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
           <Menubar/>
             <Switch>
               <Route exact path="/" component={Home}/>
+              <Route exact path="/ranking" component={Ranking}/>
               <Route path="/about" component={About}/>
             </Switch>
 
