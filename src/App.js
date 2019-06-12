@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import Home from './Home';
-import About from './About';
+import About from './SideBar';
 import Ranking from './Ranking'
 import Menubar from "./Navbar";
 

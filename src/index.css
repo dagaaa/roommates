@@ -153,6 +153,7 @@ div.body{
 div.justified {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 div.center-alligned {
@@ -256,7 +257,7 @@ div.legend-wrapper {
   padding-top:15%;
   width: 90%;
   height: 50%;
-  background: white;
+  /*background: white;*/
   align-items: center;
   justify-content: center;
 }
@@ -285,6 +286,18 @@ div.slider{
 div.column-direction {
   flex-direction: column;
 }
+h1.legend-title {
+  margin-left: 25%;
+  font-size: 23px;
+  font-family: Avenir;
+  color: rgba(63, 90, 166, 1);
+  font-weight: 900;
+}
+
+div.body> div.wrapper> #sidebar{
+   position: absolute;
+
+   left: 0;}
 
 .home-heading{
   font-family: "Avenir", sans-serif !important;
@@ -332,4 +345,11 @@ div.column-direction {
 }
 
 
+.sidebarRank{
 
+    background-color: white;
+    height: 100%;
+    width: 200px;
+    margin-top: 0px;
+
+}
