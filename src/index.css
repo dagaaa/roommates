@@ -86,6 +86,7 @@ hr{
   background-color: white;
   height: 100%;
   width: 200px;
+  margin-top: 0px;
 
 }
 .box{
@@ -93,7 +94,26 @@ hr{
   border: 1px solid #eaedf7;
   justify-content: center;
   text-align: center;
-  font-family: Avenir !important;
+  font-family: "Avenir" !important;
+
+}
+.inside-box{
+  border: 1px solid #eaedf7;
+  width: 50%;
+  margin: 3px;
+  padding: 0 !important;
+
+}
+.box-center{
+  margin-left: 190px;
+  margin-right: 250px;
+  padding: 8px;
+  border: 1px solid #eaedf7;
+  justify-content: center;
+  text-align: center;
+  font-family: "Avenir" !important;
+  width: 104%;
+  margin-bottom: 20px;
 
 }
 .box-sm{
@@ -265,3 +285,51 @@ div.slider{
 div.column-direction {
   flex-direction: column;
 }
+
+.home-heading{
+  font-family: "Avenir", sans-serif !important;
+  color: #192a5a;
+  display: flex;
+  align-self: start;
+  font-weight: bold;
+}
+ .outer-div{
+   padding: 25px;
+ }
+
+ .row-in-box{
+   display: flex;
+   align-content: start !important;
+   align-self: start !important;
+   justify-content: start !important;
+   justify-self: start !important;
+   margin: 0 !important;
+   font-family: "Avenir", sans-serif;
+   width: 100%;
+   padding: 0 !important;
+   padding-top: 2px !important;
+ }
+ .pt{
+   font-size: 22px;
+   font-family: "Avenir", sans-serif;
+   color: #3f5aa6;
+   display: flex;
+   align-self: center !important;
+   justify-self: center!important;
+   font-weight: bold;
+ }
+.title{
+  font-size: 16px;
+  font-family: "Avenir", sans-serif;
+  color: #3f5aa6;
+  font-weight: bold;
+
+}
+.description{
+  font-size: 11px;
+  font-family: "Avenir", sans-serif;
+  color: #8790a7;
+}
+
+
+
