@@ -299,6 +299,11 @@ div.body> div.wrapper> #sidebar{
 
    left: 0;}
 
+div.body> div.wrapper> #sidebar{
+   position: absolute;
+
+   left: 0;}
+
 .home-heading{
   font-family: "Avenir", sans-serif !important;
   color: #192a5a;
