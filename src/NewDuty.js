@@ -12,25 +12,12 @@ class NewDuty extends React.Component {
             hasAgreed: false
         };
 
-        this.handleChange = this.handleChange.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(e) {
-        let target = e.target;
-        let value = target.type === 'checkbox' ? target.checked : target.value;
-        let name = target.name;
-
-        this.setState({
-            [name]: value
-        });
-    }
-
     handleSubmit(e) {
-        e.preventDefault();
-
-        console.log('The form was submitted with the following data:');
-        console.log(this.state);
+        alert('Task has been successfully added!');
     }
 
     render() {
@@ -42,32 +29,55 @@ class NewDuty extends React.Component {
                         <div className="FormCenter">
                             <form onSubmit={this.handleSubmit} className="FormFields">
                                 <div className="FormField">
-                                    <label className="FormField__Label" htmlFor="name" >Full Name</label>
+                                    <label className="FormField__Label" htmlFor="name">Duty name</label>
                                     <input type="text" id="name" className="FormField__Input"
-                                           placeholder="Enter your full name" name="name" value={this.state.name}
-                                           onChange={this.handleChange}/>
+                                           placeholder="e.g. Clean the floor" name="name"/>
                                 </div>
                                 <div className="FormField">
-                                    <label className="FormField__Label" htmlFor="password">Password</label>
-                                    <input type="password" id="password" className="FormField__Input"
-                                           placeholder="Enter your password" name="password" value={this.state.password}
-                                           onChange={this.handleChange}/>
+                                    <label className="FormField__Label" htmlFor="password">Duty description</label>
+                                    <input type="text" id="description" className="FormField__Input"
+                                           placeholder="Enter task description" name="desc"/>
                                 </div>
                                 <div className="FormField">
-                                    <label className="FormField__Label" htmlFor="email">E-Mail Address</label>
-                                    <input type="email" id="email" className="FormField__Input"
-                                           placeholder="Enter your email" name="email" value={this.state.email}
-                                           onChange={this.handleChange}/>
+                                    <label className="FormField__Label" htmlFor="duty_freq">Duty frequency</label>
+                                    <div className="FormField3">
+                                        <div><select name="freq" autoFocus>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select></div>
+                                        <div className="FormField4">per</div>
+                                        <div><select name="plec" autoFocus>
+                                            <option value="day">day</option>
+                                            <option value="week">week</option>
+                                            <option value="month">month</option>
+                                        </select></div>
+                                    </div>
+                                </div>
+                                <div className="FormField">
+                                    <label className="FormField__Label" htmlFor="duty_freq">Assignee</label>
+                                    <div className="FormField3">
+                                        <div><select name="freq" autoFocus>
+                                            <option value="hm">Home - Me</option>
+                                            <option value="ha">Home - Ania</option>
+                                            <option value="fm">flat - Me</option>
+                                            <option value="fz">flat - Zuzia</option>
+                                            <option value="fa">flat - Ania</option>
+                                        </select></div>
+                                    </div>
+                                </div>
+                                <div className="FormField2">
+                                    <div><input className="FormField__Checkbox" type="checkbox"
+                                                name="hasAgreed"/> Rotate
+                                        duties over roommates
+                                    </div>
+                                    <div><input className="FormField__Checkbox" type="checkbox" name="hasAgreed"/> It is
+                                        my private duty
+                                    </div>
                                 </div>
 
-                                <div className="FormField">
-                                    <label className="FormField__CheckboxLabel">
-                                        <input className="FormField__Checkbox" type="checkbox" name="hasAgreed"/> Rotate
-                                        duties over roommates
-                                        <input className="FormField__Checkbox" type="checkbox" name="hasAgreed"/> It is
-                                        my private duty
-                                    </label>
-                                </div>
 
                                 <div className="FormField">
                                     <button className="FormField__Button mr-20">Sign Up</button>
